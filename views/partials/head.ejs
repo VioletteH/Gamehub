@@ -1,28 +1,33 @@
 <!DOCTYPE html>
 <html lang="fr">
-
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>GameHub</title>
-    <link rel="stylesheet" href="/css/style.css">
-    <% if (foundGame.name === "diceRoller"){ %>
-      <link rel="stylesheet" href="/css/diceRoller.css">
-    <%}%>
-  
+    <link rel="stylesheet" href="/css/style.css" />
+
+    <% if (typeof foundGame !== 'undefined' && foundGame.name === "diceRoller"){ %>
+    <link rel="stylesheet" href="/css/<%= foundGame.cssFile %>" />
+    <% } %> 
+    <% if (typeof foundGame !== 'undefined' && foundGame.name === "invader"){ %>
+      <link rel="stylesheet" href="/css/<%= foundGame.cssFile %>" />
+      <% } %> 
     <%# if (typeof style !== "undefined"){ %>
-       <!-- <link rel="stylesheet" href="<%# style %>"> -->
-   <%#}%>
-    
+    <!-- <link rel="stylesheet" href="<%# style %>"> -->
+    <%#}%>
+
   </head>
 
-  <body>
+  <body class="container">
     <header>
       <h1>GameHub</h1>
       <nav>
         <ul>
           <li><a href="/">Accueil</a></li>
-          <li><a href="/game/<%= games[0].name %>"><%= games[0].name %></a></li>
-          <li><a href="/game/<%= games[1].name %>"><%= games[1].name %></a></li>
+          <% for (let game of games){ %>
+            <li><a href="/game/<%= game.name %>"><%= game.name %></a></li>
+          <% } %>
+
+
         </ul>
       </nav>
     </header>

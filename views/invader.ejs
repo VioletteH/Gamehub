@@ -1,0 +1,22 @@
+<%- include("partials/head.ejs") %>
+
+  <h3>Jeu Invader</h3>
+  <form class="configuration">
+    <input placeholder="Taille de grille" class="configuration__input configuration__input--left" type="number" name="boardSize" id="boardSize" />
+    <input placeholder="Taille de pixel" class="configuration__input" type="number" name="pixelSize" id="pixelSize" />
+    <button class="configuration__input configuration__input--submit" type="submit">Valider</button>
+</form>
+<section class="game-section">
+    <div id="invader" class="board">
+      <!-- TODO insérer les divs en js -->
+    </div>
+</section>
+<aside class="color-container">
+    <div data-color="grey" class="color-container__button color-container__button--grey color-container__button--selected"></div>
+    <div data-color="black" class="color-container__button color-container__button--black"></div>
+    <div data-color="yellow" class="color-container__button color-container__button--yellow"></div>
+    <div data-color="green" class="color-container__button color-container__button--green"></div>
+</aside>
+<script src="/js/invader.js"></script>
+
+<%- include("partials/foot.ejs") %>
