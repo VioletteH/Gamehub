@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>GameHub</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <% if (foundGame.name === "diceRoller"){ %>
+      <link rel="stylesheet" href="/css/diceRoller.css">
+    <%}%>
+  
+    <%# if (typeof style !== "undefined"){ %>
+       <!-- <link rel="stylesheet" href="<%# style %>"> -->
+   <%#}%>
+    
+  </head>
+
+  <body>
+    <header>
+      <h1>GameHub</h1>
+      <nav>
+        <ul>
+          <li><a href="/">Accueil</a></li>
+          <li><a href="/game/<%= games[0].name %>"><%= games[0].name %></a></li>
+          <li><a href="/game/<%= games[1].name %>"><%= games[1].name %></a></li>
+        </ul>
+      </nav>
+    </header>
