@@ -5,15 +5,13 @@
     <title>GameHub</title>
     <link rel="stylesheet" href="/css/style.css" />
 
-    <% if (typeof foundGame !== 'undefined' && foundGame.name === "diceRoller"){ %>
-    <link rel="stylesheet" href="/css/<%= foundGame.cssFile %>" />
+    <% if (typeof game !== 'undefined' && game.name === "diceRoller"){ %>
+    <link rel="stylesheet" href="/css/<%= game.cssFile %>" />
     <% } %> 
-    <% if (typeof foundGame !== 'undefined' && foundGame.name === "invader"){ %>
-      <link rel="stylesheet" href="/css/<%= foundGame.cssFile %>" />
-      <% } %> 
-    <%# if (typeof style !== "undefined"){ %>
-    <!-- <link rel="stylesheet" href="<%# style %>"> -->
-    <%#}%>
+
+    <% if (typeof game !== 'undefined' && game.name === "invader"){ %>
+      <link rel="stylesheet" href="/css/<%= game.cssFile %>" />
+    <% } %> 
 
   </head>
 
@@ -24,7 +22,7 @@
         <ul>
           <li><a href="/">Accueil</a></li>
           <% for (let game of games){ %>
-            <li><a href="/game/<%= game.name %>"><%= game.name %></a></li>
+            <li><a href="/game/<%= game.name %>"><%= game.title %></a></li>
           <% } %>
 
 
