@@ -2,7 +2,7 @@
   {
     "name": "fourchette",
     "title": "Jeu de la fourchette",
-    "cssFile": null,
+    "cssFile": "fourchette.css",
     "jsFile": "fourchette.js"
   },
   {

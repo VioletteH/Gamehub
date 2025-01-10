@@ -1,7 +1,11 @@
-/** reset **/
+/** RESET **/
 * {
   margin: 0;
   padding: 0;
+}
+
+body{
+  height:100%;
 }
 
 a {
@@ -9,33 +13,45 @@ a {
   color: inherit;
 }
 
-/* True Styling */
+p, h1, label, a, span{
+  font-family: "Roboto", sans-serif;
+  color: white;
+}
+
+p{
+  text-align: center;
+}
+span{
+  font-weight: bold;
+}
+
+button{
+  color:white;
+  background-color: #385A7D;
+  border-radius:5px;
+  border:1px solid white;
+  padding: 10px;
+  cursor:pointer;
+}
+
+/** HEADER **/
 
 header {
-  background: rgb(88, 87, 87) center / cover no-repeat url(/images/boardgames.jpg) ;
+  background: #4c8dae ;
   display: flex;
   flex-direction: column;
 }
 
-header h1 {
-  margin: 0;
-  font-family: fantasy;
-  font-size: 5rem;
-  padding: 10px;
+.logo{
+  font-family: "Press Start 2P", serif;
+  font-size: 2rem;
+  padding : 20px;
   text-align: center;
-  color: white!important;
-  background: rgba(100,100,100,0.8);
-  text-shadow: 0px 0px 10px rgba(0,0,0,0.5), 0px 0px 10px rgba(0,0,0,0.5), 0px 0px 10px rgba(0,0,0,0.5);
-}
-
-header nav{
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  flex-direction: column;
+  color: #385A7D;
 }
 
 header nav ul {
-  background: rgba(255,255,255,0.8);
-  color: gb(243, 205, 18);
+  background: #385A7D;
   display: flex;
   justify-content: center;
   list-style-type: none;
@@ -43,27 +59,36 @@ header nav ul {
 }
 
 header nav ul li {
-  text-align:center;
   padding: 15px;
   transition: all ease .5s;
-  font-size: 1rem;
 }
 
 header nav ul li:hover {
   font-size: 1.2rem;
-  text-shadow: 0px 10px 4px rgba(0,0,0,0.5);
 }
 
-h2, h3 {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  padding-top : 20px;
-  text-align: center;
-  line-height: 3rem;
+/** BODY **/
+
+.container{
+  background-color: #4c8dae;
 }
+
+h1 {
+  font-size: 1.5rem;
+  padding : 20px;
+  text-align: center;
+}
+
+/** AUTRE **/
+
+.hidden{
+  display: none !important;
+}
+
 .erreur{
   width : 400px;
   height : 270px;
   margin : auto;
-  background: url(/images/error-404.jpg) no-repeat center;
+  background: url(/images/robot-404-error.svg) no-repeat center;
   background-size : contain;
 }

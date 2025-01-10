@@ -1,7 +1,15 @@
 <%- include("partials/head.ejs") %>
 
-  <h3>Jeu De La Fouchette</h3>
+  <h1>Jeu De La Fouchette</h1>
 
+    <form>
+        <label for="number">Entre un chiffre entre 1 et 10</label>
+        <input id="number" type="number" name="number" value="">
+        <button type="submit">Valider</button>
+    </form>
+    <p id="attempt" class="hidden">Nombre de tentatives</p>
+    <p id="indice" class="hidden">Indice</p>
+  
   <script src="/js/fourchette.js"></script>
 
 <%- include("partials/foot.ejs") %>

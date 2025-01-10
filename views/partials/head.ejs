@@ -3,7 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <title>GameHub</title>
-    <link rel="stylesheet" href="/css/style.css" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="/css/style.css"/>
+
+    <% if (typeof game !== 'undefined' && game.name === "fourchette"){ %>
+      <link rel="stylesheet" href="/css/<%= game.cssFile %>" />
+    <% } %> 
 
     <% if (typeof game !== 'undefined' && game.name === "diceRoller"){ %>
     <link rel="stylesheet" href="/css/<%= game.cssFile %>" />
@@ -16,16 +29,14 @@
   </head>
 
   <body class="container">
+    
     <header>
-      <h1>GameHub</h1>
+      <a class="logo" href="/">Gamehub</a>
       <nav>
         <ul>
-          <li><a href="/">Accueil</a></li>
           <% for (let game of games){ %>
             <li><a href="/game/<%= game.name %>"><%= game.title %></a></li>
           <% } %>
-
-
         </ul>
       </nav>
     </header>
